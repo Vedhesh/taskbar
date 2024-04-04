@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'ps';
+            src: url("playstation.ttf");
+        }
+        body{
+            background-color: black;
+            transition:body-color 0.2s ease;
+        }
+        .container{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%)
+        }
+        .main{
+            color:white;
+            font-family: 'ps';
+            font-weight: 900;
+            transition: color 0.2s ease, font-size 0.2s ease;
+        }
+        .open{
+            color:white;
+            background-color: black;
+            border:2px white solid;
+            font-size:48px;
+            padding:5px;
+            font-family: 'ps';
+            font-weight: 900;
+            border-radius:18px;
+            transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+        }
+        .open:hover{
+            color:black;
+            background-color: white;
+            transform:scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main">Unlock PS4</h1>
+        <center>
+             <button class="open" onclick="task()">
+                TASK!
+             </button>
+             <script>
+                let pwd = prompt("Password...");
+                while (pwd!="vedu"){
+                    pwd = prompt("Password...");
+                };
+                function task(){
+                    const task = document.querySelector(".main");
+                    const open = document.querySelector(".open");
+                    const body = document.body
+                    open.style.visibility = "hidden";
+                    task.style.fontSize = "48px";
+                    task.style.color = "black";
+                    body.style.backgroundColor = "white";
+                    task.innerHTML = "PS4 UNLOCKS WHEN IT RAINS 🌧";
+                };
+             </script>
+        </center>
+    </div>
+</body>
+</html>
